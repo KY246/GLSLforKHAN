@@ -292,7 +292,7 @@ function θdrawW(){
   draw();
   
   //Draw, Draw, Draw! Finally!
-  θgl.drawArrays(θgl.TRIANGLE_FAN,0,6);
+  θgl.drawArrays(θgl.TRIANGLE_FAN,0,4);
 }
 //}WebGL:Credit to Mozilla for 𝑚𝑜𝑠𝑡 of the code.
         //{Draw
@@ -413,13 +413,13 @@ function θrunP(){
    	    θeb.src = "https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/creatures/OhNoes-Happy.png";
 	  }
     }else{
-	  θrunning = false;
+      θrunning = false;
 	  
-	  console.error(θjsErrs);
-	  θohno.style.visibility = "visible";
-	  θoerr.innerHTML = "Do not use this in your code: \"" + θjsErrs[1] + "\"";
+      console.error(θjsErrs);
+      θohno.style.visibility = "visible";
+      θoerr.innerHTML = "Do not use this in your code: \"" + θjsErrs[1] + "\"";
 	  
-	  θowhr.href = `javascript:θeditor2.resize(true);
+      θowhr.href = `javascript:θeditor2.resize(true);
       θeditor2.scrollToLine(${θjsErrs[0]+1}, true, true, function () {});
       θeditor2.gotoLine(${θjsErrs[0]+1}, 0, true);`;
 	
@@ -427,16 +427,16 @@ function θrunP(){
 	}
   }else{
     θerrors = θerrors.split("ERROR")[1].slice(4);
-	console.error(θerrors);
-	θohno.style.visibility = "visible";
-	θoerr.innerHTML = θerrors.replace(/[0-9]*:/g, "");
-	var num = θerrors.match(/[0-9]*/g)[0];
+    console.error(θerrors);
+    θohno.style.visibility = "visible";
+    θoerr.innerHTML = θerrors.replace(/[0-9]*:/g, "");
+    var num = θerrors.match(/[0-9]*/g)[0];
 	
-	θowhr.href = `javascript:θeditor.resize(true);
+    θowhr.href = `javascript:θeditor.resize(true);
     θeditor.scrollToLine(${num}, true, true, function () {});
     θeditor.gotoLine(${num}, 0, true);`;
 	
-	θeb.src = "https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/creatures/OhNoes.png";
+    θeb.src = "https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/creatures/OhNoes.png";
   }
 }
 
