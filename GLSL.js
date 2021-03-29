@@ -79,7 +79,7 @@ var θpageBasics = `<!DOCTYPE html>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.9/ace.js"></script>
 	<div id="θeditor"></div>
     <div id="θbuttons">
-	  <a class="material-icons">home</a>
+	  <a href="https://www.khanacademy.org/computer-programming/glslforka-editor-home/5313525003010048" class="material-icons">home</a>
 	  <a href="javascript:θhelp(1);" class="material-icons">help</a>
 	  <a href="javascript:θrunP();" class="material-icons">play_arrow</a>
 	  <img id = "θeb" style="background-color: #00000000;position:relative;top:5px;" src="https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/creatures/OhNoes-Happy.png"/>
@@ -98,7 +98,7 @@ var θpageBasics = `<!DOCTYPE html>
 	    This is <a href="https://www.khanacademy.org/profile/KyProgramming/projects">Ky</a>'s GLSL Editor (v1). The GLSL code goes ontop, and the JavaScript goes on the bottom. To run the program, simply press the triangle play button.
 	  </p>
 	  <p style="text-align: left;">
-	    To learn how to use this, or see a list of good GLSL tutorials and resources, please visit the <a>homepage</a>.
+	    To learn how to use this, or see a list of good GLSL tutorials and resources, please visit the <a href="https://www.khanacademy.org/computer-programming/glslforka-editor-home/5313525003010048">homepage</a>.
 	  </p>
 	  <a href="javascript:θhelp(0);">[Close popup]</a>
 	</div>
@@ -112,7 +112,7 @@ void main(){
     <!--Fragment Shader-->
     <script type="not-js" id="θfs">θθINSERTθθ</script>
     <script id="θjsC" type="notjs">θθINSERTθθ</script>
-    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@7/GLSL.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@8/GLSL.js"></script>
     <script>
 // Credit to Bluebird for this section.
 // @birdwatcher03 on Khan Academy
