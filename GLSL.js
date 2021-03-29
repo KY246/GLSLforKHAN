@@ -112,7 +112,7 @@ void main(){
     <!--Fragment Shader-->
     <script type="not-js" id="θfs">θθINSERTθθ</script>
     <script id="θjsC" type="notjs">θθINSERTθθ</script>
-    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@8/GLSL.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@9/GLSL.js"></script>
     <script>
 // Credit to Bluebird for this section.
 // @birdwatcher03 on Khan Academy
@@ -443,11 +443,8 @@ function θrunP(){
 θrunP();
 window.requestAnimationFrame(θrender);
 
-if(window.innerWidth < 1197 || window.innerHeight < 597){
-  θrunning = false;
-  var link = window.location.replaceAll(/\?.*/g, "") + "?width=1200&height=600";
-  document.body.innerHTML += `<a href=${link}><div style="z-index:25;position:fixed;top:0px;left:0px;width:900px;height:600px;background:purple;color:white;">
-    Your screen size is too small!
-    Click to redirect.
-  </div></a>`;
+if(window.innerWidth < 1198 || window.innerHeight < 598){
+  var loc = location.href
+  loc = loc.replace(/\?.*/g, "") + "?width=1200&height=600";
+  document.body.innerHTML = "<a href=\""+loc+"\" style=\"background:purple;color:white;text-align:center;padding-top:160px;font-size:30px;position:fixed;width:100%;height: 600px;\">You screen is too small.<br/>Click to redirect!</a>";
 }
