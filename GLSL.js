@@ -112,7 +112,7 @@ void main(){
     <!--Fragment Shader-->
     <script type="not-js" id="θfs">θθINSERTθθ</script>
     <script id="θjsC" type="notjs">θθINSERTθθ</script>
-    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@3/GLSL.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@1/GLSL.js"></script>
   </body>
 </html>`.split("θθINSERTθθ");
 //}
@@ -410,25 +410,3 @@ function θrunP(){
 
 θrunP();
 window.requestAnimationFrame(θrender);
-
-// Credit to Bluebird for this section.
-// @birdwatcher03 on Khan Academy
-var θsave = function(){
-  var code = θpageBasics[0] + θeditor.getValue() + θpageBasics[1] + θeditor2.getValue() + θpageBasics[2];
-  
-  window.top.postMessage(θpic, "https://www.khanacademy.org/");
-};
-var θhandleSave = function(e) {
-  if (JSON.parse(e.data).screenshot) {
-    setTimeout(function() {
-      console.log("Saving...");
-      θsave();
-    }, 1000)
-  }
-};
-window.parent.savers = window.parent.savers || 0;
-window.parent.addEventListener('message', θhandleSave);
-window.parent.savers += 1;
-for (window.parent.savers; window.parent.savers > 1; window.parent.savers -= 1) {
-  window.parent.removeEventListener('message', θhandleSave)
-}
