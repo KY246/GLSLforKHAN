@@ -112,7 +112,7 @@ void main(){
     <!--Fragment Shader-->
     <script type="not-js" id="θfs">θθINSERTθθ</script>
     <script id="θjsC" type="notjs">θθINSERTθθ</script>
-    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@2/GLSL.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@3/GLSL.js"></script>
   </body>
 </html>`.split("θθINSERTθθ");
 //}
@@ -157,6 +157,7 @@ var θmouse = {x: 0, y: 0};
 var θrunning = false;
 
 var θreserved = ["θ", "window", "document", "requestAnimationFrame", "setTimeout", "setInterval", "addEventListener", "import"];
+var θpic = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=";
 
 function  θgetMousePos(canvas, evt) {
   var rect = canvas.getBoundingClientRect();
@@ -277,10 +278,12 @@ function θrender(){
     θgl.clear(θgl.COLOR_BUFFER_BIT|θgl.DEPTH_BUFFER_BIT);
   }
   
-  save();
-  /*setTimeout(() => {
+  if(θfc == 0){
+    θpic = θcanvas.toDataURL("image/png");
+  }
+  setTimeout(() => {
     window.requestAnimationFrame(θrender);
-  }, 10);*/
+  }, 10);
   
   θfc ++;
 }
@@ -410,23 +413,22 @@ window.requestAnimationFrame(θrender);
 
 // Credit to Bluebird for this section.
 // @birdwatcher03 on Khan Academy
-var save = function(){
+var θsave = function(){
   var code = θpageBasics[0] + θeditor.getValue() + θpageBasics[1] + θeditor2.getValue() + θpageBasics[2];
   
-  var b64Img = θcanvas.toDataURL("image/jpeg", 0.1);
-  window.top.postMessage(b64Img, "https://www.khanacademy.org/");
+  window.top.postMessage(θpic, "https://www.khanacademy.org/");
 };
-var handleSave = function(e) {
+var θhandleSave = function(e) {
   if (JSON.parse(e.data).screenshot) {
     setTimeout(function() {
       console.log("Saving...");
-      save();
+      θsave();
     }, 1000)
   }
 };
 window.parent.savers = window.parent.savers || 0;
-window.parent.addEventListener('message', handleSave);
+window.parent.addEventListener('message', θhandleSave);
 window.parent.savers += 1;
 for (window.parent.savers; window.parent.savers > 1; window.parent.savers -= 1) {
-  window.parent.removeEventListener('message', handleSave)
+  window.parent.removeEventListener('message', θhandleSave)
 }
