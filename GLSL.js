@@ -112,7 +112,7 @@ void main(){
     <!--Fragment Shader-->
     <script type="not-js" id="θfs">θθINSERTθθ</script>
     <script id="θjsC" type="notjs">θθINSERTθθ</script>
-	<script src="GLSL.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@latest/GLSL.js"></script>
   </body>
 </html>`.split("θθINSERTθθ");
 //}
