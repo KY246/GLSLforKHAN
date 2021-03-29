@@ -444,5 +444,5 @@ function θrunP(){
 window.requestAnimationFrame(θrender);
 
 if(window.innerWidth < 1198 || window.innerHeight < 598){
-  document.body.innerHTML = "<div style=\"background:purple;color:white;text-align:center;padding-top:160px;font-size:30px;position:fixed;width:100%;height: 600px;\">You screen is too small.<br/>Please add ?width=1200&height=600 to the end of your URL.</div>";
+  document.body.innerHTML = "<div style=\"background:purple;color:white;text-align:center;padding-top:160px;font-size:30px;position:fixed;width:100%;height: 600px;\">Your program screen is too small.<br/>Please add ?width=1200&height=600 to the end of your URL.</div>";
 }
