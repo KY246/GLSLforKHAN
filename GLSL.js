@@ -442,3 +442,12 @@ function θrunP(){
 
 θrunP();
 window.requestAnimationFrame(θrender);
+
+if(window.innerWidth < 1197 || window.innerHeight < 597){
+  θrunning = false;
+  var link = window.location.replaceAll(/\?.*/g, "") + "?width=1200&height=600";
+  document.body.innerHTML += `<a href=${link}><div style="z-index:25;position:fixed;top:0px;left:0px;width:900px;height:600px;background:purple;color:white;">
+    Your screen size is too small!
+    Click to redirect.
+  </div></a>`;
+}
