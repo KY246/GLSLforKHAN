@@ -113,6 +113,33 @@ void main(){
     <script type="not-js" id="θfs">θθINSERTθθ</script>
     <script id="θjsC" type="notjs">θθINSERTθθ</script>
     <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@4/GLSL.js"></script>
+    <script>
+// Credit to Bluebird for this section.
+// @birdwatcher03 on Khan Academy
+var θsave = function(){
+  var code = θpageBasics[0] + θeditor.getValue() + θpageBasics[1] + θeditor2.getValue() + θpageBasics[2];
+  
+  window.top.postMessage(JSON.stringify({
+    code: code
+  }), "https://www.khanacademy.org");
+  
+  window.top.postMessage(θpic, "https://www.khanacademy.org/");
+};
+var θhandleSave = function(e) {
+  if (JSON.parse(e.data).screenshot) {
+    setTimeout(function() {
+      console.log("Saving...");
+      θsave();
+    }, 1000)
+  }
+};
+window.parent.savers = window.parent.savers || 0;
+window.parent.addEventListener('message', θhandleSave);
+window.parent.savers += 1;
+for (window.parent.savers; window.parent.savers > 1; window.parent.savers -= 1) {
+  window.parent.removeEventListener('message', θhandleSave)
+}
+    </script>
   </body>
 </html>`.split("θθINSERTθθ");
 //}
@@ -158,6 +185,7 @@ var θrunning = false;
 
 var θreserved = ["θ", "window", "document", "requestAnimationFrame", "setTimeout", "setInterval", "addEventListener", "import"];
 var θpic = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=";
+var θtake_pic = true;
 
 function  θgetMousePos(canvas, evt) {
   var rect = canvas.getBoundingClientRect();
@@ -278,8 +306,9 @@ function θrender(){
     θgl.clear(θgl.COLOR_BUFFER_BIT|θgl.DEPTH_BUFFER_BIT);
   }
   
-  if(θfc == 0){
+  if(θtake_pic){
     θpic = θcanvas.toDataURL("image/png");
+    θtake_pic = false;
   }
   setTimeout(() => {
     window.requestAnimationFrame(θrender);
@@ -331,6 +360,9 @@ window.addEventListener("keyup", (ev) => {
   delete keys[ev.key];
   if(θrunning && focused){
     keyPressed(ev);
+    if(ev.key == "q" && (ev.ctrlKey || ev.metaKey)){
+      θtake_pic = true;
+    }
   }
 });
 
