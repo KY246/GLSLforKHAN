@@ -112,7 +112,7 @@ void main(){
     <!--Fragment Shader-->
     <script type="not-js" id="θfs">θθINSERTθθ</script>
     <script id="θjsC" type="notjs">θθINSERTθθ</script>
-    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@6/GLSL.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@7/GLSL.js"></script>
     <script>
 // Credit to Bluebird for this section.
 // @birdwatcher03 on Khan Academy
