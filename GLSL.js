@@ -112,12 +112,12 @@ void main(){
     <!--Fragment Shader-->
     <script type="not-js" id="θfs">θθINSERTθθ</script>
     <script id="θjsC" type="notjs">θθINSERTθθ</script>
-    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@11/GLSL.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@12/GLSL.js"></script>
     <script>
 // Credit to Bluebird for this section.
 // @birdwatcher03 on Khan Academy
 var θsave = function(){
-  var code = θpageBasics[0] + θeditor.getValue() + θpageBasics[1] + θeditor2.getValue() + θpageBasics[2];
+  var code = θpageBasics[0].replace("<title>WIP</title>", "<title>"+document.title+"</title>") + θeditor.getValue() + θpageBasics[1] + θeditor2.getValue() + θpageBasics[2];
   
   window.top.postMessage(JSON.stringify({
     code: code
