@@ -1,4 +1,4 @@
-//Line 106
+//Line 103
 
 var getInfoKey = (data) => {
   let d=data ? data.revision.code : "";
@@ -100,7 +100,7 @@ void main(){
     <script id="ky__jsC" type="notjs">øøINSERTøø</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.9/ace.js"></script>
     <script id="jscbk" type="application/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@28/v2.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@29/v2.0.js"></script>
     <script type="application/javascript">
 // Credit to Bluebird for this section.
 // @birdwatcher03 on Khan Academy
@@ -518,8 +518,8 @@ if(window.innerWidth < 1198 || window.innerHeight < 598){
     if(!vis){
       ky__prgmID = document.getElementById("pgmid").value || ky__prgmID;
       
-      ky__width = document.getElementById("wdpd").value + 3;
-      ky__height = document.getElementById("wdpd").value + 3;
+      ky__width = (+document.getElementById("wdpd").value) + 3;
+      ky__height = (+document.getElementById("wdpd").value) + 3;
     }
   }
   
