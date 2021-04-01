@@ -100,7 +100,7 @@ void main(){
     <script id="ky__jsC" type="notjs">øøINSERTøø</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.9/ace.js"></script>
     <script id="jscbk" type="application/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@27/v2.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@28/v2.0.js"></script>
     <script type="application/javascript">
 // Credit to Bluebird for this section.
 // @birdwatcher03 on Khan Academy
@@ -165,21 +165,13 @@ document.body.innerHTML = `<div class="notC">
     <p>
       Program ID: <input type="number" id="pgmid" placeholder="${ky__prgmID}"></input>
       <br/><br/>
-    Program Width: 
+    Program Size: 
     <select name="width" id="wdpd" value="600">
           <option value="500" ${ky__width == 500 ? "selected=\"selected\"" : ""}>500</option>
-          <option value="600" ${ky__width == 600 ? "selected=\"selected\"" : ""}>600</option>
-          <option value="700" ${ky__width == 700 ? "selected=\"selected\"" : ""}>700</option>
-          <option value="800" ${ky__width == 800 ? "selected=\"selected\"" : ""}>800</option>
-          <option value="900" ${ky__width == 900 ? "selected=\"selected\"" : ""}>900</option>
-          <option value="1000" ${ky__width == 1000 ? "selected=\"selected\"" : ""}>1000</option>
-        </select>
-    <br/><br/>
-    Program Height: 
-    <select name="height" id="hdpd">
-          <option value="500" ${ky__height == 500 ? "selected=\"selected\"" : ""}>500</option>
-          <option value="600" ${ky__height == 600 ? "selected=\"selected\"" : ""}>600</option>
-          <option value="700" ${ky__height == 700 ? "selected=\"selected\"" : ""}>700</option>
+          <option value="600" ${ky__width == 550 ? "selected=\"selected\"" : ""}>550</option>
+          <option value="700" ${ky__width == 600 ? "selected=\"selected\"" : ""}>600</option>
+          <option value="800" ${ky__width == 650 ? "selected=\"selected\"" : ""}>650</option>
+          <option value="900" ${ky__width == 700 ? "selected=\"selected\"" : ""}>700</option>
         </select>
     </p>
     Need help? Please visit the <a href="https://www.khanacademy.org/computer-programming/glslforka-editor-home/5313525003010048" target="_blank">homepage</a>.
@@ -348,7 +340,7 @@ ky__gl.bindFramebuffer(ky__gl.FRAMEBUFFER, null);
 ky__gl.viewport(0,0,ky__canvas.clientWidth,ky__canvas.clientHeight);
 //makes the background blue (not that it matters when the whole thing is being covered be a big white plane).
 ky__gl.clearColor(0,0,0,1);
-//With all this preparation, why not actually display the great 3D?
+//With all this preparation, why not actually display the 3D?
 function ky__drawW(){
   //sets the background color, and deletes any old canvas drawing data, speeding up the webGL.
   ky__gl.clear(ky__gl.COLOR_BUFFER_BIT|ky__gl.DEPTH_BUFFER_BIT);
@@ -371,7 +363,7 @@ function ky__drawW(){
 function ky__render(){
   if(ky__running){
     frameCount = ky__fc;
-  keyIsPressed = keys.length > 0 ? 1 : 0;
+    keyIsPressed = keys.length > 0 ? 1 : 0;
     ky__drawW();
   }else{
     ky__gl.clear(ky__gl.COLOR_BUFFER_BIT|ky__gl.DEPTH_BUFFER_BIT);
@@ -526,8 +518,8 @@ if(window.innerWidth < 1198 || window.innerHeight < 598){
     if(!vis){
       ky__prgmID = document.getElementById("pgmid").value || ky__prgmID;
       
-      ky__width = document.getElementById("wdpd").value;
-      ky__height = document.getElementById("hdpd").value;
+      ky__width = document.getElementById("wdpd").value + 3;
+      ky__height = document.getElementById("wdpd").value + 3;
     }
   }
   
