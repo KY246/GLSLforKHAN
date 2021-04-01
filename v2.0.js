@@ -103,7 +103,7 @@ void main(){
     <script id="ky__jsC" type="notjs">øøINSERTøø</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.9/ace.js"></script>
     <script id="jscbk" type="application/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@24/v2.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@25/v2.0.js"></script>
     <script type="application/javascript">
 // Credit to Bluebird for this section.
 // @birdwatcher03 on Khan Academy
@@ -277,8 +277,8 @@ var ky__canvas=document.getElementById("ky__gl");
 if(window.innerWidth < 1198 || window.innerHeight < 598){
   ky__canvas.style.top = "0px";
   ky__canvas.style.left = "0px";
-  ky__canvas.width = ky__width;
-  ky__canvas.height = ky__height;
+  ky__canvas.style.width = ky__width + "px";
+  ky__canvas.style.height = ky__height + "px";
 }
 
 var width = ky__canvas.clientWidth;
