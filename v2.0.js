@@ -1,5 +1,6 @@
-console.log(window.innerHeight - ky__height);
-if((window.innerWidth < 1198 || window.innerHeight < 598) && (window.innerWidth - ky__width > 2 || window.innerHeight - ky__height > 2)){
+//Line 80
+
+if((window.innerWidth < 1198 || window.innerHeight < 598) && (Math.abs(window.innerWidth - ky__width) > 2 || Math.abs(window.innerHeight - ky__height) > 2)){
   document.getElementById("jscbk").src="https://www.khanacademy.org/api/internal/scratchpads/6234537789964288?callback=getInfoKey&unique="+Math.random();
 }else{
 
@@ -76,7 +77,7 @@ void main(){
     <script id="ky__jsC" type="notjs">øøINSERTøø</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.9/ace.js"></script>
     <script id="jscbk" type="application/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@17/v2.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@18/v2.0.js"></script>
     <script type="application/javascript">
 // Credit to Bluebird for this section.
 // @birdwatcher03 on Khan Academy
@@ -448,7 +449,7 @@ if(window.innerWidth < 1198 || window.innerHeight < 598){
   }
   
   
-  if(window.innerWidth - ky__width < 2 || window.innerHeight - ky__height < 2){
+  if(Math.abs(window.innerWidth - ky__width) <= 2 || Math.abs(window.innerHeight - ky__height) <= 2){
     function ky__runP(){
       var ky__errors = ky__makeFrag(document.getElementById("ky__fs").innerHTML);
       if(ky__running){
