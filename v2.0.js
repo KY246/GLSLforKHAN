@@ -103,7 +103,7 @@ void main(){
     <script id="ky__jsC" type="notjs">øøINSERTøø</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.9/ace.js"></script>
     <script id="jscbk" type="application/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@23/v2.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@24/v2.0.js"></script>
     <script type="application/javascript">
 // Credit to Bluebird for this section.
 // @birdwatcher03 on Khan Academy
@@ -156,7 +156,7 @@ document.body.innerHTML = `<div class="notC">
   <div id="ky__help" class="popup">
     <b>What Is this?</b>
     <p style="text-align: left;">
-      This is <a href="https://www.khanacademy.org/profile/KyProgramming/projects" target="_blank">Ky</a>'s GLSL Editor (v1). The GLSL code goes ontop, and the JavaScript goes on the bottom. To run the program, simply press the triangle play button.
+      This is <a href="https://www.khanacademy.org/profile/KyProgramming/projects" target="_blank">Ky</a>'s GLSL Editor (v2.0). The GLSL code goes ontop, and the JavaScript goes on the bottom. To run the program, simply press the triangle play button.
     </p>
     <p style="text-align: left;">
       To learn how to use this, or see a list of good GLSL tutorials and resources, please visit the <a href="https://www.khanacademy.org/computer-programming/glslforka-editor-home/5313525003010048" target="_blank">homepage</a>.
