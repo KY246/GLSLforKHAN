@@ -1,4 +1,30 @@
-//Line 80
+//Line 106
+
+var getInfoKey = (data) => {
+  let d=data ? data.revision.code : "";
+  d = d.match(/var ky__importantKey = \"[0-9]+\";/g);
+  d = d ? d[0].match(/[0-9]+/g)[0] : false;
+  console.log(d);
+  if(d == ky__importantKey){
+    document.body.innerHTML = `
+      <div style=\"background:url('https://www.khanacademy.org/computer-programming/basic-raymarcher/6234537789964288/4877193906700288.png') no-repeat center; background-size: cover;color:white;text-align:center;padding-top:160px;font-size:30px;position:fixed;width:100%;height: 600px;text-shadow: 0px 0px 4px black;\">
+        Your program screen is too small.
+        <br/><br/><br/>
+        <a href="https://www.khanacademy.org/computer-programming/-/${ky__prgmID}?width=1200&height=600" target="_blank" style="color:white">Click here to view program with GLSL editor.</a>
+        <br/><br/>
+        <a href="https://www.khanacademy.org/computer-programming/-/${ky__prgmID}?width=${ky__width}&height=${ky__height}&editor=no" target="_blank" style="color:white">Click here to view program without GLSL editor.</a>
+      </div>`;
+  }else{
+    document.body.innerHTML = `
+      <div style=\"background:url('https://www.khanacademy.org/computer-programming/basic-raymarcher/6234537789964288/4877193906700288.png') no-repeat center; background-size: cover;color:white;text-align:center;padding-top:160px;font-size:30px;position:fixed;width:100%;height: 600px;text-shadow: 0px 0px 4px black;\">
+        Your program screen is too small.
+        <br/><br/><br/>
+        Please add ?width=1200&height=600 to the end of your URL to view program with GLSL editor.
+        <br/><br/>
+        Or add ?width=${ky__width}&height=${ky__height}&editor=no to the end of your URL to view without GLSL editor.
+      </div>`;
+  }
+};
 
 if((window.innerWidth < 1198 || window.innerHeight < 598) && (Math.abs(window.innerWidth - ky__width) > 2 || Math.abs(window.innerHeight - ky__height) > 2)){
   document.getElementById("jscbk").src="https://www.khanacademy.org/api/internal/scratchpads/6234537789964288?callback=getInfoKey&unique="+Math.random();
@@ -77,7 +103,7 @@ void main(){
     <script id="ky__jsC" type="notjs">øøINSERTøø</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.9/ace.js"></script>
     <script id="jscbk" type="application/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@18/v2.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@19/v2.0.js"></script>
     <script type="application/javascript">
 // Credit to Bluebird for this section.
 // @birdwatcher03 on Khan Academy
@@ -414,33 +440,6 @@ window.addEventListener("keyup", (ev) => {
   }
 });
 
-  
-
-var getInfoKey = (data) => {
-  let d=data ? data.revision.code : "";
-  d = d.match(/var ky__importantKey = \"[0-9]+\";/g);
-  d = d ? d[0].match(/[0-9]+/g)[0] : false;
-  console.log(d);
-  if(d == ky__importantKey){
-    document.body.innerHTML = `
-      <div style=\"background:url('https://www.khanacademy.org/computer-programming/basic-raymarcher/6234537789964288/4877193906700288.png') no-repeat center; background-size: cover;color:white;text-align:center;padding-top:160px;font-size:30px;position:fixed;width:100%;height: 600px;text-shadow: 0px 0px 4px black;\">
-        Your program screen is too small.
-        <br/><br/><br/>
-        <a href="https://www.khanacademy.org/computer-programming/-/${ky__prgmID}?width=1200&height=600" target="_blank" style="color:white">Click here to view program with GLSL editor.</a>
-        <br/><br/>
-        <a href="https://www.khanacademy.org/computer-programming/-/${ky__prgmID}?width=${ky__width}&height=${ky__height}&editor=no" target="_blank" style="color:white">Click here to view program without GLSL editor.</a>
-      </div>`;
-  }else{
-    document.body.innerHTML = `
-      <div style=\"background:url('https://www.khanacademy.org/computer-programming/basic-raymarcher/6234537789964288/4877193906700288.png') no-repeat center; background-size: cover;color:white;text-align:center;padding-top:160px;font-size:30px;position:fixed;width:100%;height: 600px;text-shadow: 0px 0px 4px black;\">
-        Your program screen is too small.
-        <br/><br/><br/>
-        Please add ?width=1200&height=600 to the end of your URL to view program with GLSL editor.
-        <br/><br/>
-        Or add ?width=${ky__width}&height=${ky__height}&editor=no to the end of your URL to view without GLSL editor.
-      </div>`;
-  }
-};
 
 if(window.innerWidth < 1198 || window.innerHeight < 598){
   var bye = document.getElementsByClassName("notC");
