@@ -55,12 +55,9 @@ var ky__take_pic = true;
 
 function  ky__getMousePos(canvas, evt) {
   var rect = canvas.getBoundingClientRect();
-  var scaX = canvas.clientWidth / rect.clientWidth;
-  var scaY = canvas.clientHeight / rect.clientHeight;
-
   ky__mouse = {
-    x: (evt.clientX - rect.left) * scaX,
-    y: (evt.clientY - rect.top) * scaY
+    x: (evt.clientX - rect.left),
+    y: (evt.clientY - rect.top)
   }
 }
 
@@ -103,7 +100,7 @@ void main(){
     <script id="ky__jsC" type="notjs">øøINSERTøø</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.9/ace.js"></script>
     <script id="jscbk" type="application/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@26/v2.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@27/v2.0.js"></script>
     <script type="application/javascript">
 // Credit to Bluebird for this section.
 // @birdwatcher03 on Khan Academy
