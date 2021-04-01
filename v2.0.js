@@ -27,7 +27,7 @@ var getInfoKey = (data) => {
 };
 
 if((window.innerWidth < 1198 || window.innerHeight < 598) && (Math.abs(window.innerWidth - ky__width) > 2 || Math.abs(window.innerHeight - ky__height) > 2)){
-  document.getElementById("jscbk").src="https://www.khanacademy.org/api/internal/scratchpads/"+ ky__prgrmID +"?callback=getInfoKey&unique="+Math.random();
+  document.getElementById("jscbk").src="https://www.khanacademy.org/api/internal/scratchpads/"+ ky__prgmID +"?callback=getInfoKey&unique="+Math.random();
 }else{
 
 //vars
@@ -103,7 +103,7 @@ void main(){
     <script id="ky__jsC" type="notjs">øøINSERTøø</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.9/ace.js"></script>
     <script id="jscbk" type="application/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@22/v2.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@23/v2.0.js"></script>
     <script type="application/javascript">
 // Credit to Bluebird for this section.
 // @birdwatcher03 on Khan Academy
