@@ -100,7 +100,7 @@ void main(){
     <script id="ky__jsC" type="notjs">øøINSERTøø</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.9/ace.js"></script>
     <script id="jscbk" type="application/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@29/v2.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@30/v2.0.js"></script>
     <script type="application/javascript">
 // Credit to Bluebird for this section.
 // @birdwatcher03 on Khan Academy
@@ -168,10 +168,10 @@ document.body.innerHTML = `<div class="notC">
     Program Size: 
     <select name="width" id="wdpd" value="600">
           <option value="500" ${ky__width == 500 ? "selected=\"selected\"" : ""}>500</option>
-          <option value="600" ${ky__width == 550 ? "selected=\"selected\"" : ""}>550</option>
-          <option value="700" ${ky__width == 600 ? "selected=\"selected\"" : ""}>600</option>
-          <option value="800" ${ky__width == 650 ? "selected=\"selected\"" : ""}>650</option>
-          <option value="900" ${ky__width == 700 ? "selected=\"selected\"" : ""}>700</option>
+          <option value="550" ${ky__width == 550 ? "selected=\"selected\"" : ""}>550</option>
+          <option value="600" ${ky__width == 600 ? "selected=\"selected\"" : ""}>600</option>
+          <option value="650" ${ky__width == 650 ? "selected=\"selected\"" : ""}>650</option>
+          <option value="700" ${ky__width == 700 ? "selected=\"selected\"" : ""}>700</option>
         </select>
     </p>
     Need help? Please visit the <a href="https://www.khanacademy.org/computer-programming/glslforka-editor-home/5313525003010048" target="_blank">homepage</a>.
