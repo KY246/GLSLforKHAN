@@ -185,8 +185,8 @@ var ky__owhr = document.getElementById("ky__where");
 var ky__eb = document.getElementById("ky__eb");
 ky__ohno.style.visibility = "hidden";
 
-document.getElementById("ky__editor").innerHTML=(document.getElementById("ky__fs").innerHTML).replace(/&/g, "&amp;").replace(/</g, "&lt;").replaceAll(/>/g, "&gt;");
-document.getElementById("ky__js").innerHTML=(document.getElementById("ky__jsC").innerHTML).replace(/&/g, "&amp;").replaceAll(/</g, "&lt;").replaceAll(/>/g, "&gt;");
+document.getElementById("ky__editor").innerHTML=(document.getElementById("ky__fs").innerHTML).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+document.getElementById("ky__js").innerHTML=(document.getElementById("ky__jsC").innerHTML).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 document.getElementById("style").innerHTML = `
   html, body {
   height: 100%; 
