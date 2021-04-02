@@ -100,7 +100,7 @@ void main(){
     <script id="ky__jsC" type="notjs">øøINSERTøø</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.9/ace.js"></script>
     <script id="jscbk" type="application/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@31/v2.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/KY246/GLSLforKHAN@32/v2.0.js"></script>
     <script type="application/javascript">
 // Credit to Bluebird for this section.
 // @birdwatcher03 on Khan Academy
@@ -185,8 +185,8 @@ var ky__owhr = document.getElementById("ky__where");
 var ky__eb = document.getElementById("ky__eb");
 ky__ohno.style.visibility = "hidden";
 
-document.getElementById("ky__editor").innerHTML=(document.getElementById("ky__fs").innerHTML).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
-document.getElementById("ky__js").innerHTML=(document.getElementById("ky__jsC").innerHTML).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+document.getElementById("ky__editor").innerHTML=(document.getElementById("ky__fs").innerHTML).replace(/&/g, "&amp;").replace(/</g, "&lt;").replaceAll(/>/g, "&gt;");
+document.getElementById("ky__js").innerHTML=(document.getElementById("ky__jsC").innerHTML).replace(/&/g, "&amp;").replaceAll(/</g, "&lt;").replaceAll(/>/g, "&gt;");
 document.getElementById("style").innerHTML = `
   html, body {
   height: 100%; 
