@@ -153,7 +153,7 @@ document.body.innerHTML = `<div class="notC">
   <div id="ky__help" class="popup">
     <b>What Is this?</b>
     <p style="text-align: left;">
-      This is <a href="https://www.khanacademy.org/profile/KyProgramming/projects" target="_blank">Ky</a>'s GLSL Editor (v2.0). The GLSL code goes ontop, and the JavaScript goes on the bottom. To run the program, simply press the triangle play button.
+      This is <a href="https://www.khanacademy.org/profile/KyProgramming/projects" target="_blank">Ky</a>'s GLSL Editor (v2.1). The GLSL code goes ontop, and the JavaScript goes on the bottom. To run the program, simply press the triangle play button.
     </p>
     <p style="text-align: left;">
       To learn how to use this, or see a list of good GLSL tutorials and resources, please visit the <a href="https://www.khanacademy.org/computer-programming/glslforka-editor-home/5313525003010048" target="_blank">homepage</a>.
